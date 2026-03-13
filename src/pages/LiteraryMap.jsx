@@ -31,6 +31,7 @@ function FlyToMarker({ target }) {
 }
 
 const ALL_ERAS = ['全部', '六朝', '明清', '现当代', '当代'];
+
 const ALL_TYPES = ['全部', '文化地标', '文学地标', '文学空间', '文化街区'];
 
 function PillButton({ label, active, onClick }) {
@@ -156,6 +157,50 @@ function SuggestionBox({ landmarkId, landmarkName }) {
   );
 }
 
+// 实景图组件（带 onerror 占位）
+function LandmarkImage({ lm }) {
+  const [failed, setFailed] = useState(false);
+
+  if (!lm.image || failed) {
+    return (
+      <div style={{
+        height: 160,
+        background: `linear-gradient(135deg, ${lm.color}33, ${lm.color}88)`,
+        display: 'flex', flexDirection: 'column',
+        alignItems: 'center', justifyContent: 'center',
+        color: lm.color,
+      }}>
+        <div style={{ fontSize: 36 }}>{typeIcons[lm.type]}</div>
+        <div className="font-serif" style={{ fontSize: 14, fontWeight: 700, marginTop: 8 }}>{lm.name}</div>
+        <div style={{ fontSize: 11, opacity: 0.7, marginTop: 4 }}>实景图待补充</div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ position: 'relative', height: 180, overflow: 'hidden' }}>
+      <img
+        src={lm.image}
+        alt={lm.name}
+        onError={() => setFailed(true)}
+        style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+      />
+      <div style={{
+        position: 'absolute', bottom: 0, left: 0, right: 0,
+        padding: '24px 14px 8px',
+        background: 'linear-gradient(transparent, rgba(0,0,0,0.55))',
+      }}>
+        <div className="font-serif" style={{ color: '#fff', fontSize: 15, fontWeight: 700, textShadow: '0 1px 3px rgba(0,0,0,0.5)' }}>
+          {lm.name}
+        </div>
+        <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.8)', marginTop: 2 }}>
+          图片来源：Wikimedia Commons
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // 详情面板
 function DetailPanel({ lm, onClose }) {
   if (!lm) return null;
@@ -204,6 +249,9 @@ function DetailPanel({ lm, onClose }) {
           </button>
         </div>
       </div>
+
+      {/* 实景图 */}
+      <LandmarkImage lm={lm} />
 
       <div style={{ padding: '0 20px 20px' }}>
         {/* 简介 */}
