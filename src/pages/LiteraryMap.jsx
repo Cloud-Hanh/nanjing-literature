@@ -69,14 +69,23 @@ function distKm(a, b) {
   return R * 2 * Math.atan2(Math.sqrt(aa), Math.sqrt(1 - aa));
 }
 
+// 优先级权重：东南大学(id=14) > 南京大学(id=13)，通过虚拟距离偏移实现
+const PRIORITY_IDS = [14]; // 东南大学优先入选
+
 function nearestNeighbor(pool, count) {
   if (pool.length <= count) return [...pool];
-  // 从地理中心出发
-  const cLat = pool.reduce((s, l) => s + l.lat, 0) / pool.length;
-  const cLng = pool.reduce((s, l) => s + l.lng, 0) / pool.length;
-  let remaining = [...pool];
-  const result = [];
-  let cur = { lat: cLat, lng: cLng };
+
+  // 强制优先纳入 PRIORITY_IDS 中存在于 pool 的地标
+  const priority = pool.filter(l => PRIORITY_IDS.includes(l.id));
+  let remaining = pool.filter(l => !PRIORITY_IDS.includes(l.id));
+  const result = [...priority];
+
+  // 从已选地标的地理中心继续最近邻
+  const startPool = result.length ? result : pool;
+  const cLat = startPool.reduce((s, l) => s + l.lat, 0) / startPool.length;
+  const cLng = startPool.reduce((s, l) => s + l.lng, 0) / startPool.length;
+  let cur = result.length ? result[result.length - 1] : { lat: cLat, lng: cLng };
+
   while (result.length < count && remaining.length > 0) {
     const nearest = remaining.reduce((a, b) => distKm(cur, a) < distKm(cur, b) ? a : b);
     result.push(nearest);

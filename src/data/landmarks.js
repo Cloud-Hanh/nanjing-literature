@@ -7,7 +7,7 @@ export const landmarks = [
     era: '六朝', type: '文化地标',
     desc: '始建于东晋，千年来是南京文教中心，科举文化的象征。秦淮河畔的文脉源头。',
     works: '《文心雕龙》《诗品》', writers: '刘勰、钟嵘', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Nanjing_Fuzimiao_3.jpg/640px-Nanjing_Fuzimiao_3.jpg',
+    wikiTitle: 'Confucius_Temple,_Nanjing',
     detail: {
       history: '夫子庙始建于东晋咸康三年（337年），供奉孔子，是南京最重要的文教圣地。明清时期随江南贡院的繁荣而达到鼎盛，周边形成了规模庞大的文化商业区。历经多次毁损与重建，现存建筑以清代风格为主，已成为集文化、旅游、商业于一体的历史街区。',
       highlight: '大成殿内孔子铜像、棂星门、泮池、学宫建筑群，以及节假日的秦淮灯会。',
@@ -23,7 +23,7 @@ export const landmarks = [
     era: '六朝', type: '文学地标',
     desc: '东晋王谢两大世族聚居地，刘禹锡《乌衣巷》让这条小巷成为中国最著名的文学意象。',
     works: '《乌衣巷》', writers: '刘禹锡', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Wuyi_Lane_Nanjing.jpg/640px-Wuyi_Lane_Nanjing.jpg',
+    wikiTitle: 'Wuyi_Lane',
     detail: {
       history: '乌衣巷是东晋王导、谢安等世家大族的聚居之地，因贵族子弟着乌衣而得名。刘禹锡《乌衣巷》"旧时王谢堂前燕，飞入寻常百姓家"，使此地成为千古意象。现存王谢古居为仿古建筑，内有历史陈列。',
       highlight: '王谢古居复原陈列、巷口石刻、傍晚古朴街巷氛围。',
@@ -39,7 +39,7 @@ export const landmarks = [
     era: '六朝', type: '文化地标',
     desc: '建于六朝建康城遗址之上，保存有全国规模最大的六朝都城遗址，是了解南京文学源头的最佳场所。',
     works: '《世说新语》', writers: '刘义庆', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Museum_of_Six_Dynasties_Nanjing.jpg/640px-Museum_of_Six_Dynasties_Nanjing.jpg',
+    wikiTitle: 'Museum_of_Six_Dynasties',
     detail: {
       history: '六朝博物馆于2014年建成，由贝聿铭之子贝建中设计，建于六朝建康城遗址之上，馆内保存有大面积的六朝夯土遗址，是研究六朝文化的重要实物资料。六朝时期（220–589年）南京文学理论成就卓越，《文心雕龙》《诗品》《世说新语》均诞生于此时期。',
       highlight: '地下层六朝夯土遗址（原位保存）、六朝文学文化陈列、贝氏建筑设计本身。',
@@ -55,7 +55,7 @@ export const landmarks = [
     era: '六朝', type: '文学地标',
     desc: '六朝皇宫遗址，韦庄《台城》"无情最是台城柳，依旧烟笼十里堤"成为千古咏史名句。',
     works: '《台城》', writers: '韦庄', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Nanjing_city_wall_Taicheng.jpg/640px-Nanjing_city_wall_Taicheng.jpg',
+    wikiTitle: 'Nanjing_city_wall',
     detail: {
       history: '台城是六朝时期建康城的宫城所在地，唐代诗人韦庄途经此地写下"江雨霏霏江草齐，六朝如梦鸟空啼。无情最是台城柳，依旧烟笼十里堤"，成为咏史诗的代表作。现存台城城墙是明代南京城墙的一段，紧邻玄武湖，风景秀丽。',
       highlight: '明城墙遗迹、玄武湖湖景、傍晚的柳色烟堤景观。',
@@ -73,7 +73,7 @@ export const landmarks = [
     era: '明清', type: '文化地标',
     desc: '中国历史上规模最大的科举考场，鼎盛时可容纳两万余考生，孕育了无数文学巨匠。',
     works: '《儒林外史》', writers: '吴敬梓', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/China_Keju_Museum_Nanjing.jpg/640px-China_Keju_Museum_Nanjing.jpg',
+    wikiTitle: 'Jiangnan_Examination_Hall',
     detail: {
       history: '江南贡院始建于南宋乾道四年（1168年），明清两代多次扩建，鼎盛时号舍多达两万余间，全国一半以上进士出自于此。唐伯虎、郑板桥等皆在此参加科考。1905年科举废除后逐渐衰败，2014年建成中国科举博物馆。',
       highlight: '中国科举博物馆（地下四层，沉浸式体验）、明远楼（保存最完整的贡院建筑）、号舍复原展示。',
@@ -89,7 +89,7 @@ export const landmarks = [
     era: '明清', type: '文学地标',
     desc: '曹雪芹生于南京江宁织造府，《红楼梦》中金陵十二钗的故事与南京有着深厚渊源。',
     works: '《红楼梦》', writers: '曹雪芹', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Jiangning_Textile_Museum_Nanjing.jpg/640px-Jiangning_Textile_Museum_Nanjing.jpg',
+    wikiTitle: 'Jiangning_Textile_Museum',
     detail: {
       history: '曹雪芹的祖父曹寅曾长期担任江宁织造，曹雪芹在此度过童年。书中大观园、金陵十二钗皆有南京印记。2009年在原址建成博物馆，由吴良镛主持设计，融合传统园林与现代理念。',
       highlight: '博物馆建筑（吴良镛设计）、红楼梦主题陈列、江宁织造历史展、云锦工艺展示。',
@@ -105,7 +105,7 @@ export const landmarks = [
     era: '明清', type: '文化地标',
     desc: '明清时期南京最大的官办道观，也是当时文人雅集之地，现为南京市博物馆所在地。',
     works: '《桃花扇》', writers: '孔尚任', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Chaotiangong_Nanjing.jpg/640px-Chaotiangong_Nanjing.jpg',
+    wikiTitle: 'Chaotian_Palace',
     detail: {
       history: '朝天宫始建于东晋，明代扩建为全国最大的官办道观，是明太祖朱元璋举行重要礼仪的场所。清代为文人雅集之地，孔尚任《桃花扇》中多有涉及。现存建筑为清代风格，完整保留了中轴线格局，现作为南京市博物馆使用。',
       highlight: '清代建筑群全貌、南京市博物馆历史文物展、周边古城南市井文化。',
@@ -121,7 +121,7 @@ export const landmarks = [
     era: '明清', type: '文学地标',
     desc: '因传说歌女莫愁而得名，历代文人雅士留下大量诗篇，是南京最具诗意的湖泊。',
     works: '《莫愁乐》《石城乐》', writers: '萧衍', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Mochou_Lake_Nanjing.jpg/640px-Mochou_Lake_Nanjing.jpg',
+    wikiTitle: 'Mochou_Lake',
     detail: {
       history: '莫愁湖得名于南朝歌女莫愁，南朝梁武帝萧衍《河中之水歌》"莫愁十五能织绮，十六颇知死事"即咏此。明代朱元璋曾在此设胜棋楼与徐达下棋，清代有"金陵第一名湖"之誉，历代诗人词客留下大量吟咏。',
       highlight: '胜棋楼（明代建筑）、莫愁女雕像、湖景与古园林、牡丹园（春季）。',
@@ -137,7 +137,7 @@ export const landmarks = [
     era: '明清', type: '文化地标',
     desc: '清代南京著名文人甘熙的私宅，是南京城区现存规模最大的私人民居，也是南京民俗博物馆所在地。',
     works: '《白下琐言》', writers: '甘熙', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ganxi_Mansion_Nanjing.jpg/640px-Ganxi_Mansion_Nanjing.jpg',
+    wikiTitle: null,
     detail: {
       history: '甘熙故居建于清道光年间，甘熙（1798–1853）是清代南京著名的文人学者，著有《白下琐言》，记录了大量南京的历史掌故与民俗。故居俗称"九十九间半"，是南京典型的多进穿堂式宅院，现辟为南京民俗博物馆。',
       highlight: '完整的清代多进院落建筑、南京民俗文化展览、非遗手工艺体验（剪纸、泥人等）。',
@@ -153,7 +153,7 @@ export const landmarks = [
     era: '明清', type: '文学地标',
     desc: '东晋王献之送别爱妾桃叶的渡口，历代文人雅士多在此感怀，是秦淮文化的重要节点。',
     works: '《桃叶歌》', writers: '王献之', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Taoyedu_Nanjing.jpg/640px-Taoyedu_Nanjing.jpg',
+    wikiTitle: null,
     detail: {
       history: '桃叶渡得名于东晋书法家王献之的爱妾桃叶。王献之常在此迎送桃叶过渡，并为她作《桃叶歌》。明代此处成为秦淮河文人雅集的重要场所，清代八大名妓多活动于此附近，是《桃花扇》故事的重要背景之地。',
       highlight: '渡口石刻、秦淮河景、附近的明清民居街巷。',
@@ -171,7 +171,7 @@ export const landmarks = [
     era: '现当代', type: '文学地标',
     desc: '朱自清与父亲在此月台分别，写下《背影》中最动人的篇章，成为中国现代散文的经典意象。',
     works: '《背影》', writers: '朱自清', color: '#52b788',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Pukou_Station_Nanjing.jpg/640px-Pukou_Station_Nanjing.jpg',
+    wikiTitle: 'Pukou_railway_station',
     detail: {
       history: '浦口火车站建于1914年，是津浦铁路的南端终点站。1917年朱自清在此与父亲分别，父亲翻越月台买橘的场景成为1925年散文《背影》中最动人的意象，被选入中学语文课本，影响了几代中国人。车站2004年停运，现作为历史建筑保留，正开发为文化创意园区。',
       highlight: '保存完好的民国建筑群、月台原址（《背影》发生地）、津浦铁路历史陈列。',
@@ -187,7 +187,7 @@ export const landmarks = [
     era: '现当代', type: '文化地标',
     desc: '诺贝尔文学奖得主赛珍珠曾在此任教，代表作《大地》在南京期间酝酿成形。',
     works: '《大地》', writers: '赛珍珠', color: '#52b788',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nanjing_University_North_Building.jpg/640px-Nanjing_University_North_Building.jpg',
+    wikiTitle: 'Nanjing_University',
     detail: {
       history: '南京大学前身金陵大学建于1888年，赛珍珠（Pearl S. Buck）曾在此任教多年，在南京期间深入了解中国农民生活，写就《大地》三部曲，1938年获诺贝尔文学奖，成为首位获此殊荣的美国女作家。',
       highlight: '北大楼（标志性民国建筑）、赛珍珠故居（校内）、梧桐大道，整个校园本身就是民国文化景观。',
@@ -203,7 +203,7 @@ export const landmarks = [
     era: '现当代', type: '文化地标',
     desc: '中国近代史的重要见证地，孙中山、蒋介石等均在此办公，留下大量文人政客的历史痕迹。',
     works: '《阿Q正传》（鲁迅在宁期间）', writers: '鲁迅', color: '#52b788',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Nanjing_Presidential_Palace.jpg/640px-Nanjing_Presidential_Palace.jpg',
+    wikiTitle: 'Presidential_Palace_(Nanjing)',
     detail: {
       history: '总统府是中国近现代重要的政治活动中心，前身为清代两江总督署。1912年孙中山在此宣誓就任临时大总统，此后历经多个历史时期。现为"中国近代史遗址博物馆"，保存有大量民国历史建筑与文物。',
       highlight: '子超楼（民国建筑精品）、孙中山办公室、煦园（清代园林）、民国历史陈列。',
@@ -218,10 +218,10 @@ export const landmarks = [
     id: 14,
     name: '东南大学（四牌楼校区）',
     lat: 32.0578, lng: 118.7816,
-    era: '当代', type: '文化地标',
+    era: '现当代', type: '文化地标',
     desc: '东南大学主校区，本项目的诞生地。校园保存有大量民国建筑，是南京近代教育文化的重要组成。',
     works: '本项目研究发源地', writers: '东南大学大创团队', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Southeast_University_Nanjing_Zhongda_Hospital.jpg/640px-Southeast_University_Zhongda_Hospital.jpg',
+    wikiTitle: 'Southeast_University_(China)',
     detail: {
       history: '东南大学四牌楼校区前身为1902年建立的三江师范学堂，是中国最早的现代高等学府之一。校内保存有建于1920–30年代的大礼堂、图书馆等民国建筑，由著名建筑师杨廷宝主持设计。本项目"南京世界文学之都研究"即在此诞生，是东南大学本科生大创课题。',
       highlight: '大礼堂（民国建筑经典之作）、校园内的法国梧桐大道、历史建筑群落，以及本项目研究团队的工作地。',
@@ -237,7 +237,7 @@ export const landmarks = [
     era: '当代', type: '文学空间',
     desc: '南京最具代表性的独立书店，连续多年入选"全球最美书店"，是城市文学氛围的重要地标。',
     works: '', writers: '', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Librairie_Avant-Garde_Nanjing.jpg/640px-Librairie_Avant-Garde_Nanjing.jpg',
+    wikiTitle: 'Librairie_Avant-Garde',
     detail: {
       history: '先锋书店由钱小华于1996年创立，五台山总店利用废弃停车场地下空间改造，面积约4000㎡，以"人文、思想、艺术"为定位，曾入选英国《卫报》"全球最美书店"。',
       highlight: '地下空间设计、精选人文社科书籍、文创产品、不定期文学讲座与读书会。',
@@ -253,7 +253,7 @@ export const landmarks = [
     era: '当代', type: '文学空间',
     desc: '2020年开放，南京"世界文学之都"建设的标志性空间，定期举办国际文学交流和驻地作家项目。',
     works: '', writers: '', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/World_Literature_Living_Room_Nanjing.jpg/640px-World_Literature_Living_Room_Nanjing.jpg',
+    wikiTitle: null,
     detail: {
       history: '世界文学客厅是南京获评"世界文学之都"后的核心文学空间，2020年开放。先后接待来自30余个国家的作家与文学研究者，是联合国教科文组织创意城市网络的重要实体空间。',
       highlight: '国际文学展览（定期更换）、驻地作家成果展示、文学活动现场。',
@@ -301,7 +301,7 @@ export const landmarks = [
     era: '当代', type: '文化街区',
     desc: '南京最具市井文学气息的历史街区，集文创、书店、非遗于一体，文学与日常生活融合的典范。',
     works: '', writers: '', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Laomendong_Historic_Area_Nanjing.jpg/640px-Laomendong_Historic_Area_Nanjing.jpg',
+    wikiTitle: 'Old_Mendo_Historic_Area',
     detail: {
       history: '老门东位于南京城南中华门以东，有1800多年历史。2013年完成修缮，以"老南京·新生活"为定位，保留明清建筑风貌，引入书店、文创、非遗工坊等业态，是文学与市井生活融合的最佳样本。',
       highlight: '传统民居建筑群、非遗体验（金陵刻经、南京剪纸）、文创集市、特色小食。',
@@ -317,7 +317,7 @@ export const landmarks = [
     era: '明清', type: '文化地标',
     desc: '世界现存规模最大的古代城堡式城门，明代南京城墙的标志性节点，历代文人多有题咏。',
     works: '《金陵怀古》', writers: '多位诗人', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Zhonghuamen_Castle_Nanjing_China.jpg/640px-Zhonghuamen_Castle_Nanjing_China.jpg',
+    wikiTitle: 'Zhonghua_Gate',
     detail: {
       history: '中华门建于明代初年（1368–1398年），是南京城墙最大的城门，也是世界现存规模最大的瓮城城堡。整座城门由内外四道瓮城组成，设有27个藏兵洞，可藏兵3000余人。南京明城墙总长35公里，是世界上现存最长的古代城墙，2012年列入"世界文化遗产"预备名录。',
       highlight: '瓮城结构（世界最大）、藏兵洞、城墙顶部远眺秦淮河景色。',
@@ -333,7 +333,7 @@ export const landmarks = [
     era: '当代', type: '文化地标',
     desc: '中国三大博物馆之一，保存大量南京历史文物，设有专门的民国文化与文学史陈列。',
     works: '', writers: '', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Nanjing_Museum.jpg/640px-Nanjing_Museum.jpg',
+    wikiTitle: 'Nanjing_Museum',
     detail: {
       history: '南京博物院创建于1933年，是民国时期国家级博物馆，现为中国三大博物馆之一，馆藏文物43万余件。设有历史、艺术、特展、民国、非遗、数字六大展馆，其中民国馆复原了1930年代南京街市，是了解南京近代文学背景的绝佳场所。',
       highlight: '民国馆（街市复原，极具沉浸感）、历史馆（六朝至明清文物）、艺术馆。',
@@ -349,7 +349,7 @@ export const landmarks = [
     era: '六朝', type: '文学地标',
     desc: '六朝时期皇家禁苑，历代帝王与文人的精神场所，"烟笼寒水月笼沙"即咏此处秦淮景色。',
     works: '《泊秦淮》', writers: '杜牧', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Xuanwu_Lake_Nanjing_China.jpg/640px-Xuanwu_Lake_Nanjing_China.jpg',
+    wikiTitle: 'Xuanwu_Lake',
     detail: {
       history: '玄武湖古称"桑泊"，六朝时为皇家禁苑，南朝刘宋文帝曾在此阅兵。湖面广阔，与紫金山、城墙相映，历代文人多有吟咏。唐代杜牧《泊秦淮》意境虽非直写玄武湖，但金陵城郭与湖光的意象一脉相承，构成南京文学地理的重要组成。',
       highlight: '湖面五洲风光、南京明城墙环湖景色、鸡鸣寺远眺，春季樱花尤为著名。',
@@ -365,7 +365,7 @@ export const landmarks = [
     era: '六朝', type: '文化地标',
     desc: '南朝时期即已香火鼎盛的古刹，历代文人墨客留下大量诗词，是南京文学地理的重要一环。',
     works: '《鸡鸣寺路》', writers: '多位诗人', color: '#8B4513',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Jiming_Temple_Nanjing.jpg/640px-Jiming_Temple_Nanjing.jpg',
+    wikiTitle: 'Jiming_Temple',
     detail: {
       history: '鸡鸣寺始建于西晋太康年间，南朝时为皇家寺院，是南京最古老的佛教圣地之一。历史上屡毁屡建，现存建筑为清代重建，寺内豁蒙楼可俯瞰玄武湖全景，是文人凭栏赋诗的传统胜地。',
       highlight: '药师佛塔（七层八角）、豁蒙楼（俯瞰玄武湖）、樱花大道（春季）、古朴寺院氛围。',
@@ -381,7 +381,7 @@ export const landmarks = [
     era: '明清', type: '文化地标',
     desc: '明太祖朱元璋的陵墓，UNESCO世界遗产，历代文人多有祭扫与题咏，是南京文学地理的重要组成。',
     works: '《金陵怀古》系列', writers: '多位诗人', color: '#d4a574',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ming_Xiaoling_Mausoleum.jpg/640px-Ming_Xiaoling_Mausoleum.jpg',
+    wikiTitle: 'Ming_Xiaoling_Mausoleum',
     detail: {
       history: '明孝陵是明太祖朱元璋及马皇后的合葬陵墓，建于1381–1405年，是中国明清皇陵的蓝本。2003年列入世界文化遗产，陵区内保存有完整的神道（石象路）、方城明楼等建筑，四周古树参天，是南京最重要的历史人文景区之一。',
       highlight: '石象路（各式石雕动物）、棂星门、方城明楼、梅花山（春季赏梅）。',
@@ -397,7 +397,7 @@ export const landmarks = [
     era: '当代', type: '文学空间',
     desc: '中国第二大公共图书馆，也是"世界文学之都"建设的重要基础设施，馆藏千万册典籍。',
     works: '', writers: '', color: '#95d5b2',
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Nanjing_Library_China.jpg/640px-Nanjing_Library_China.jpg',
+    wikiTitle: 'Nanjing_Library',
     detail: {
       history: '南京图书馆前身为1907年建立的江南图书馆，是中国历史最悠久的公共图书馆之一，现馆藏文献逾千万册，是仅次于国家图书馆的全国第二大公共图书馆。馆内设有古籍特藏、数字阅览、24小时自助借阅等多种服务，是"书香南京"全民阅读工程的核心场所。',
       highlight: '古籍特藏阅览（需预约）、宽阔的阅读大厅、不定期举办文学讲座与展览。',
