@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* ========== CSS 变量：双主题 ========== */
+:root {
+  --bg-primary: #faf8f5;
+  --bg-secondary: #f0ebe3;
+  --bg-card: #fffcf7;
+  --bg-sidebar: linear-gradient(180deg, #3d2b1f, #5a3e2b);
+  --text-primary: #2a2016;
+  --text-secondary: #7a6a58;
+  --text-on-dark: #f0ebe3;
+  --accent: #8B4513;
+  --accent-light: #d4a574;
+  --accent-dark: #5a3e2b;
+  --border: #e8ddd0;
+  --green-deep: #2d6a4f;
+  --green-mid: #52b788;
+  --green-light: #95d5b2;
+  --shadow: 0 2px 12px rgba(139, 69, 19, 0.08);
+  --shadow-md: 0 4px 24px rgba(139, 69, 19, 0.12);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1412;
+  --bg-secondary: #2a211b;
+  --bg-card: #332a22;
+  --bg-sidebar: linear-gradient(180deg, #0d0a08, #1a1412);
+  --text-primary: #e8ddd0;
+  --text-secondary: #a89888;
+  --text-on-dark: #e8ddd0;
+  --accent: #d4a574;
+  --accent-light: #e8c9a0;
+  --accent-dark: #8B4513;
+  --border: #4a3f35;
+  --green-deep: #52b788;
+  --green-mid: #95d5b2;
+  --green-light: #d8f3dc;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== 全局基础样式 ========== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Noto Sans SC', -apple-system, 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== 字体工具类 ========== */
+.font-serif {
+  font-family: 'Noto Serif SC', Georgia, 'Times New Roman', serif;
+}
+
+.font-display {
+  font-family: 'DM Serif Display', 'Noto Serif SC', Georgia, serif;
+}
+
+/* ========== 渐变文字 ========== */
+.text-gradient {
+  background: linear-gradient(135deg, #8B4513 0%, #d4a574 50%, #8B4513 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+[data-theme="dark"] .text-gradient {
+  background: linear-gradient(135deg, #e8c9a0 0%, #d4a574 50%, #e8c9a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========== 滚动条 ========== */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent-light); border-radius: 3px; }
+
+/* ========== 粒子动画 ========== */
+@keyframes float-particle {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  25%       { transform: translateY(-22px) translateX(8px); opacity: 0.6; }
+  50%       { transform: translateY(-38px) translateX(-6px); opacity: 0.4; }
+  75%       { transform: translateY(-14px) translateX(-10px); opacity: 0.55; }
+}
+
+@keyframes timeline-pulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(212,165,116,0.5); }
+  50%       { transform: scale(1.15); box-shadow: 0 0 0 10px rgba(212,165,116,0); }
+}
+
+/* ========== Leaflet 弹窗覆盖 ========== */
+.leaflet-popup-content-wrapper {
+  background: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-md) !important;
+  padding: 0 !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+.leaflet-popup-tip {
+  background: var(--bg-card) !important;
+}
+.leaflet-popup-close-button {
+  color: var(--text-secondary) !important;
+  font-size: 18px !important;
+  top: 8px !important;
+  right: 10px !important;
+}
+
+/* ========== 卡片通用 ========== */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
