@@ -88,8 +88,8 @@ function SidebarContent({ onClose }) {
         justifyContent: 'space-between',
       }}>
         <div style={{ fontSize: 10, color: 'rgba(212,165,116,0.5)', lineHeight: 1.6 }}>
-          <div>东南大学 · 大创项目</div>
-          <div>2024 - 2025</div>
+          <div>SEU SRTP</div>
+          <div>2025 - 2026</div>
         </div>
         <ThemeToggle />
       </div>
