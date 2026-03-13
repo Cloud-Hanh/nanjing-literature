@@ -1,10 +1,9 @@
-import { useMemo } from 'react';
 import {
   PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer,
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   RadialBarChart, RadialBar,
 } from 'recharts';
-import WordCloud from 'react-wordcloud';
+import WordCloud from '../components/WordCloud';
 import ScrollReveal from '../components/ScrollReveal';
 import SectionHeader from '../components/SectionHeader';
 import {
@@ -101,20 +100,7 @@ function DonutChart({ data, colors }) {
 
 // 词云（Q4、Q9）
 function WordCloudChart({ words }) {
-  const options = useMemo(() => ({
-    rotations: 2,
-    rotationAngles: [0, -30],
-    fontSizes: [14, 48],
-    fontFamily: "'Noto Serif SC', serif",
-    padding: 6,
-    deterministic: true,
-    colors: ['#8B4513', '#d4a574', '#52b788', '#c9845c', '#2d6a4f', '#95d5b2'],
-  }), []);
-  return (
-    <div style={{ height: 200 }}>
-      <WordCloud words={words} options={options} />
-    </div>
-  );
+  return <WordCloud words={words} height={200} />;
 }
 
 // 雷达图（Q10、Q12）
