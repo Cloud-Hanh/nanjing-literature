@@ -1,5 +1,5 @@
 import {
-  PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer,
+  PieChart, Pie, Cell, Tooltip, Legend, ResponsiveContainer, // Legend used by DonutChart
   RadarChart, Radar, PolarGrid, PolarAngleAxis, PolarRadiusAxis,
   RadialBarChart, RadialBar,
 } from 'recharts';
@@ -140,47 +140,43 @@ function RadarChartComp({ data, color = ACCENT }) {
 function RoseChart({ data, colors }) {
   const sorted = [...data].sort((a, b) => b.pct - a.pct);
   return (
-    <ResponsiveContainer width="100%" height={240}>
-      <RadialBarChart
-        cx="50%" cy="50%"
-        innerRadius="15%"
-        outerRadius="85%"
-        barSize={18}
-        data={sorted}
-        startAngle={90}
-        endAngle={-270}
-      >
-        <RadialBar
-          minAngle={4}
-          dataKey="pct"
-          cornerRadius={4}
-          background={{ fill: 'var(--bg-secondary)' }}
-          animationBegin={0}
-          animationDuration={900}
+    <div>
+      <ResponsiveContainer width="100%" height={200}>
+        <RadialBarChart
+          cx="50%" cy="50%"
+          innerRadius="15%"
+          outerRadius="88%"
+          barSize={18}
+          data={sorted}
+          startAngle={90}
+          endAngle={-270}
         >
-          {sorted.map((_, i) => <Cell key={i} fill={colors[i % colors.length]} />)}
-        </RadialBar>
-        <Legend
-          iconType="circle"
-          iconSize={8}
-          layout="vertical"
-          align="right"
-          verticalAlign="middle"
-          formatter={(value) => {
-            const item = sorted.find(d => d.label === value);
-            return (
-              <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>
-                {value} <b style={{ color: 'var(--text-primary)' }}>{item?.pct.toFixed(1)}%</b>
-              </span>
-            );
-          }}
-        />
-        <Tooltip
-          formatter={(v, name) => [`${v.toFixed(1)}%`, name]}
-          contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12 }}
-        />
-      </RadialBarChart>
-    </ResponsiveContainer>
+          <RadialBar
+            minAngle={4}
+            dataKey="pct"
+            cornerRadius={4}
+            background={{ fill: 'var(--bg-secondary)' }}
+            animationBegin={0}
+            animationDuration={900}
+          >
+            {sorted.map((_, i) => <Cell key={i} fill={colors[i % colors.length]} />)}
+          </RadialBar>
+          <Tooltip
+            formatter={(v, name) => [`${v.toFixed(1)}%`, name]}
+            contentStyle={{ background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 8, fontSize: 12 }}
+          />
+        </RadialBarChart>
+      </ResponsiveContainer>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 16px', justifyContent: 'center', marginTop: 8 }}>
+        {sorted.map((d, i) => (
+          <div key={d.label} style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+            <div style={{ width: 8, height: 8, borderRadius: 2, background: colors[i % colors.length], flexShrink: 0 }} />
+            <span style={{ fontSize: 11, color: 'var(--text-secondary)' }}>{d.label}</span>
+            <span style={{ fontSize: 11, fontWeight: 700, color: colors[i % colors.length] }}>{d.pct.toFixed(1)}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
 
@@ -243,6 +239,12 @@ export default function DataInsights() {
   // 词云数据
   const q4Words = q4Symbols.slice(0, 4).map(d => ({ text: d.label, value: d.value }));
   const q9Words = q9Channels.map(d => ({ text: d.label, value: d.value }));
+
+  // 雷达图标签缩短（避免 PolarAngleAxis 截断）
+  const q10ShortLabels = ['宣传不足', '地标串联', '青年参与', '日常融合', '形式单一', '国际知名'];
+  const q12ShortLabels = ['地标探访', '美食文创', '故居参观', '互动环节', '音频导览', '数字地图'];
+  const q10Radar = q10Problems.map((d, i) => ({ ...d, label: q10ShortLabels[i] ?? d.label }));
+  const q12Radar = q12RouteElements.map((d, i) => ({ ...d, label: q12ShortLabels[i] ?? d.label }));
 
   return (
     <div style={{ padding: '48px 48px 80px', maxWidth: 1100, margin: '0 auto' }}>
@@ -354,7 +356,7 @@ export default function DataInsights() {
         {/* Q10 问题雷达图 */}
         <ChartCard>
           <ChartTitle sub="Q10 · 多选 · n=216">建设痛点六维雷达图</ChartTitle>
-          <RadarChartComp data={q10Problems} color="#8B4513" />
+          <RadarChartComp data={q10Radar} color="#8B4513" />
           <InsightBox>
             宣传不足（<b>64.81%</b>）是第一大痛点；地标缺乏串联（54.17%）与青年参与感不足（50.93%）紧随其后——三者构成破局核心。
           </InsightBox>
@@ -372,7 +374,7 @@ export default function DataInsights() {
         {/* Q12 路线期待雷达图 */}
         <ChartCard>
           <ChartTitle sub="Q12 · 多选 · n=216">理想文学旅游路线期待雷达图</ChartTitle>
-          <RadarChartComp data={q12RouteElements} color="#52b788" />
+          <RadarChartComp data={q12Radar} color="#52b788" />
           <InsightBox color="#52b788">
             经典地标探访（<b>75.46%</b>）与美食文创（<b>68.06%</b>）是双核期待，深度参观（49.07%）与互动（42.59%）形成补充。
           </InsightBox>
