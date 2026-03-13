@@ -100,7 +100,7 @@ export default function Home() {
               marginBottom: 24,
               letterSpacing: 2,
             }}>
-              东南大学 · 大创研究项目
+              东南大学 · SRTP 研究项目
             </div>
 
             <h1
@@ -209,7 +209,7 @@ export default function Home() {
                 南京于2019年获联合国教科文组织授予"世界文学之都"称号，成为<strong style={{ color: 'var(--text-primary)' }}>中国唯一、亚洲第三</strong>座获此殊荣的城市。
               </p>
               <p style={{ fontSize: 14, color: 'var(--text-secondary)', lineHeight: 1.8, margin: '12px 0 0' }}>
-                本项目是东南大学本科生大创课题，围绕三条主线展开研究：溯源千年文脉、调研当代造境实践、基于问卷数据诊断问题并提出创新策略。
+                本项目是东南大学本科生 SRTP 课题，围绕三条主线展开研究：溯源千年文脉、调研当代造境实践、基于问卷数据诊断问题并提出创新策略。
               </p>
             </div>
           </ScrollReveal>
